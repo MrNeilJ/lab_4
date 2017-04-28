@@ -44,8 +44,10 @@ void University::addBuilding(Building currBuilding) {
  * GETTERS
  *************************************/
 
-void University::printStudent(int location) {
-	std::cout << "Name: " << studentGroup.at(location).getName() << std::endl;
-	std::cout << "Age : " << studentGroup.at(location).getAge() << std::endl;
-	std::cout << "GPA : " << studentGroup.at(location).getGpa() << std::endl;
+void University::printStudentBody(std::vector<Student> group) {
+	for (int i = 0; i < group.size(); i++) {
+		group.at(i).print;
+		std::cout << "---------------------" << std::endl;
+	}
+
 }

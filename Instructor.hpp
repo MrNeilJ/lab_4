@@ -23,6 +23,9 @@ public:
 	// Getter
 	double getRating();
 
+	// Member Function
+	void print();
+
 
 };
 

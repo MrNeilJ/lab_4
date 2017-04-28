@@ -26,6 +26,7 @@ public:
 
 	// Member Functions
 	void do_work(int);
+	virtual void print();
 };
 
 

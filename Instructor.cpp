@@ -35,3 +35,8 @@ void Instructor::setRating(double userRating) {
 double Instructor::getRating() {
 	return rating;
 }
+
+void Instructor::print() {
+	People::print();
+	std::cout << "Rating: " << rating << std::endl;
+}

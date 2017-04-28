@@ -38,7 +38,7 @@ public:
 	// Getters
 
 	// Member Functions
-	void printStudent(int);
+	void printStudentBody(std::vector<Student>);
 
 };
 

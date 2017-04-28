@@ -48,3 +48,8 @@ void People::do_work(int) {
 
 }
 
+void People::print() {
+		std::cout << "Name: " << name << std::endl;
+		std::cout << "Age : " << age << std::endl;
+}
+

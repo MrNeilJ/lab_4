@@ -22,6 +22,9 @@ public:
 	// Getters
 	double getGpa();
 
+	// Member functions
+	void print();
+
 };
 
 
