@@ -25,6 +25,11 @@ int main() {
 	myUniversity.addStudent(Student("Chase", 26, 3.0));
 
 	myUniversity.printStudent(0);
+	std::cout << "---------------" << std::endl;
+	myUniversity.printStudent(1);
+	std::cout << "---------------" << std::endl;
+	myUniversity.printStudent(2);
+
 
 
 	return 0;

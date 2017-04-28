@@ -8,7 +8,7 @@
 
 #include "Student.hpp"
 
-class Instructor : People {
+class Instructor : public People {
 private:
 	double rating;
 

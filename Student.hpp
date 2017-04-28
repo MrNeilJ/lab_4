@@ -9,14 +9,13 @@
 #include "People.hpp"
 #include <iostream>
 
-class Student : People {
+class Student : public People {
 private:
 	double gpa;
 public:
 	// Constructors
 	Student();
 	Student(std::string, int, double);
-
 	// Setters
 	void setGpa(double);
 

@@ -29,7 +29,7 @@ Student::Student() {
 	gpa = 0.0;
 }
 
-Student::Student(std::string userStr, int userInt, double userDoub) {
+Student::Student(std::string userStr, int userInt, double userDoub){
 	setName(userStr);
 	setAge(userInt);
 	gpa = userDoub;
