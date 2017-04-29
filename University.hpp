@@ -1,6 +1,15 @@
-//
-// Created by Neil on 4/28/2017.
-//
+/**************************************************************
+ * Author: Neil Johnson
+ *
+ * Date: 4.30.2017
+ *
+ * Description: This is the Univeristy header class for this program.
+ * This class host much of the functionality of the application.
+ * It saves vectors for each of the types of groups we have and
+ * allows us to save new users, access their information, search
+ * through them, make them do work, and even print out the
+ * information in an easy to ready format
+ **************************************************************/
 
 #ifndef LAB_4_UNIVERSITY_HPP
 #define LAB_4_UNIVERSITY_HPP

@@ -1,6 +1,13 @@
-//
-// Created by Neil on 4/28/2017.
-//
+/**************************************************************
+ * Author: Neil Johnson
+ *
+ * Date: 4.30.2017
+ *
+ * Description: This is the header building class for the University
+ * program.  In here we are able to construct building objects
+ * and can print out information stored in it, such as
+ * the name of the building, size in sqft and even the address.
+**************************************************************/
 
 #ifndef LAB_4_BUILDING_HPP
 #define LAB_4_BUILDING_HPP
@@ -12,8 +19,6 @@ private:
 	std::string name;
 	std::string address;
 	double sqft;
-
-
 
 public:
 	// Constructor
@@ -32,6 +37,4 @@ public:
 	// Member Functions
 	void printBuilding();
 };
-
-
 #endif //LAB_4_BUILDING_HPP

@@ -20,7 +20,7 @@ int getInt();					// Confirms user input was an int and returns that value
 float getFloat();				// Confirms user input was a float and returns that value
 
 // String manipulators
-std::string lowerCase(std::string);
-std::string capitalize(std::string) ;
+void lowerCase(std::string);    // Sets all letters in a string to lowercase values
+void capitalize(std::string);	// Sets the first letter in a string to uppercase
 
 #endif //PROJECT_2_INPUTCHECK_HPP
