@@ -2,6 +2,7 @@
 // Created by Neil on 4/28/2017.
 //
 
+#include <cmath>
 #include "People.hpp"
 
 /*************************************
@@ -21,6 +22,10 @@ People::People(std::string userStr, int userInt) {
  * GETTERS
  *************************************/
 std::string People::getName() {
+	return name;
+}
+
+std::string People::getName() const {
 	return name;
 }
 
@@ -44,12 +49,15 @@ void People::setAge(int userInt) {
  * MEMBER FUNCTIONS
  *************************************/
 
-void People::do_work(int) {
-
+void People::do_work(int x) {
+	std::cout << getName() << "worked for " << static_cast<int>(std::floor((x - x / 2) * ( (double)rand() / (double)RAND_MAX ) + (x/2)))
+											<< " hours.";
 }
 
 void People::print() {
 		std::cout << "Name: " << name << std::endl;
 		std::cout << "Age : " << age << std::endl;
 }
+
+
 

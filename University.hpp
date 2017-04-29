@@ -5,12 +5,13 @@
 #ifndef LAB_4_UNIVERSITY_HPP
 #define LAB_4_UNIVERSITY_HPP
 
+#include <iostream>
 #include "People.hpp"
 #include "Student.hpp"
 #include "Instructor.hpp"
 #include "Building.hpp"
-#include <iostream>
 #include <vector>
+#include <memory>
 
 class University {
 private:
@@ -20,9 +21,9 @@ private:
 	int numInstructors;
 	int numBuildings;
 
-	std::vector<Student> 	studentGroup;
+	std::vector<Student> studentGroup;
 	std::vector<Instructor> instructorGroup;
-	std::vector<Building>	buildingGroup;
+	std::vector<Building> buildingGroup;
 
 
 public:
@@ -36,11 +37,20 @@ public:
 	void addBuilding(Building);
 
 	// Getters
+	std::string getUniName();
+	int getPopulation();
+	int getNumStudents();
+	int getNumInstructors();
+	int getNumBuildings();
 
 	// Member Functions
-	void printStudentBody(std::vector<Student>);
+	void printStudentBody();
+	void printInstructorBody();
+	void printBuildings();
+	People* memberSearch(std::string);
 
 };
+
 
 
 #endif //LAB_4_UNIVERSITY_HPP

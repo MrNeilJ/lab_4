@@ -28,6 +28,9 @@ public:
 	std::string getName();
 	std::string getAddress();
 	double getSqft();
+
+	// Member Functions
+	void printBuilding();
 };
 
 

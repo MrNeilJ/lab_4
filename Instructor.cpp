@@ -3,6 +3,8 @@
 //
 
 #include <queue>
+#include <iomanip>
+#include <cmath>
 #include "Instructor.hpp"
 
 
@@ -16,10 +18,10 @@ Instructor::Instructor() {
 	rating = 0.0;
 }
 
-Instructor::Instructor(std::string userStr, int userInt, double userDoub) {
+Instructor::Instructor(std::string userStr, int userInt) {
 	setName(userStr);
 	setAge(userInt);
-	rating = userDoub;
+	rating = (5.0 - 2.0) * ( (double)rand() / (double)RAND_MAX ) + 1.5;
 }
 
 /*************************************
@@ -38,5 +40,10 @@ double Instructor::getRating() {
 
 void Instructor::print() {
 	People::print();
-	std::cout << "Rating: " << rating << std::endl;
+	std::cout  << std::setprecision(2) << "Rating: " << rating << std::endl;
+}
+
+void Instructor::do_work(int x) {
+	std::cout << getName() << " graded papers for " << static_cast<int>(std::floor((x - x / 2) * ( (double)rand() / (double)RAND_MAX ) + (x/2)))
+													<< " hours.";
 }

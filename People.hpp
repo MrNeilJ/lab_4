@@ -18,6 +18,7 @@ public:
 
 	// Getters
 	std::string getName();
+	std::string getName() const;
 	int getAge();
 
 	// Setters
@@ -25,8 +26,9 @@ public:
 	void setAge(int);
 
 	// Member Functions
-	void do_work(int);
+	virtual void do_work(int);
 	virtual void print();
+
 };
 
 

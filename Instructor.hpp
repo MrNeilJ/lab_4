@@ -15,7 +15,7 @@ private:
 public:
 	// Constructor
 	Instructor();
-	Instructor(std::string, int, double);
+	Instructor(std::string, int);
 
 	// Setter
 	void setRating(double);
@@ -25,7 +25,7 @@ public:
 
 	// Member Function
 	void print();
-
+	void do_work(int);
 
 };
 

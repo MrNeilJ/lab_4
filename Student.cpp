@@ -3,6 +3,8 @@
 //
 
 #include "Student.hpp"
+#include <iomanip>
+#include <cmath>
 
 
 /*************************************
@@ -14,10 +16,10 @@ Student::Student() {
 	gpa = 0.0;
 }
 
-Student::Student(std::string userStr, int userInt, double userDoub){
+Student::Student(std::string userStr, int userInt){
 	setName(userStr);
 	setAge(userInt);
-	gpa = userDoub;
+	gpa = (4.0 - 2.0) * ( (double)rand() / (double)RAND_MAX ) + 2.0;
 }
 
 
@@ -41,5 +43,10 @@ double Student::getGpa() {
 
 void Student::print() {
 	People::print();
-	std::cout << "GPA: " << gpa << std::endl;
+	std::cout << std::setprecision(2) << "GPA: "  << gpa << std::endl;
+}
+
+void Student::do_work(int x) {
+	std::cout << getName() << " studied for " 	<< static_cast<int>(std::floor((x - x / 2) * ( (double)rand() / (double)RAND_MAX ) + (x/2)))
+												<< " hours.";
 }

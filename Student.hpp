@@ -15,7 +15,7 @@ private:
 public:
 	// Constructors
 	Student();
-	Student(std::string, int, double);
+	Student(std::string, int);
 	// Setters
 	void setGpa(double);
 
@@ -24,6 +24,7 @@ public:
 
 	// Member functions
 	void print();
+	void do_work(int);
 
 };
 

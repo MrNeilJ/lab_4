@@ -2,6 +2,7 @@
 // Created by Neil on 4/28/2017.
 //
 
+#include <iomanip>
 #include "Building.hpp"
 
 
@@ -47,4 +48,12 @@ double Building::getSqft() {
 	return sqft;
 }
 
+/*************************************
+ * MEMBER FUNCTIONS
+ *************************************/
 
+void Building::printBuilding() {
+	std::cout << std::fixed << std::setprecision(1) << "Building:    " << getName() << std::endl;
+	std::cout << std::fixed << std::setprecision(1) << "Address:     " << getAddress() << std::endl;
+	std::cout << std::fixed << std::setprecision(1) << "Square Foot: " << getSqft() << std::endl;
+}

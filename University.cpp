@@ -7,11 +7,19 @@
  * CONSTRUCTORS
  *************************************/
 University::University() {
-
+	uniName 		= "";
+	population		= 0;
+	numStudents		= 0;
+	numInstructors	= 0;
+	numBuildings	= 0;
 }
 
 University::University(std::string userUni) {
-	uniName = userUni;
+	uniName 		= userUni;
+	population		= 0;
+	numStudents		= 0;
+	numInstructors	= 0;
+	numBuildings	= 0;
 }
 
 /*************************************
@@ -33,21 +41,74 @@ void University::addBuilding(Building currBuilding) {
 	buildingGroup.push_back(currBuilding);
 	numBuildings++;
 }
+/*************************************
+ * GETTERS
+ *************************************/
+
+std::string University::getUniName() {
+	return uniName;
+}
+
+int University::getPopulation() {
+	return population;
+}
+
+int University::getNumStudents() {
+	return numStudents;
+}
+
+int University::getNumInstructors() {
+	return numInstructors;
+}
+
+int University::getNumBuildings() {
+	return numBuildings;
+}
 
 /*************************************
  * MEMBER FUNCTIONS
  *************************************/
 
-
-
-/*************************************
- * GETTERS
- *************************************/
-
-void University::printStudentBody(std::vector<Student> group) {
-	for (int i = 0; i < group.size(); i++) {
-		group.at(i).print;
+void University::printStudentBody() {
+	for (int i = 0; i < studentGroup.size(); i++) {
+		studentGroup.at(i).print();
 		std::cout << "---------------------" << std::endl;
 	}
 
 }
+
+void University::printInstructorBody() {
+	for (int i = 0; i < instructorGroup.size(); i++) {
+		instructorGroup.at(i).print();
+		std::cout << "---------------------" << std::endl;
+	}
+}
+
+void University::printBuildings() {
+	for (int i = 0; i < buildingGroup.size(); i++) {
+		buildingGroup.at(i).printBuilding();
+		std::cout << "---------------------" << std::endl;
+	}
+}
+
+People* University::memberSearch(std::string memberName) {
+	People* tempPtr;
+	for (int i = 0; i < studentGroup.size(); i++ ) {
+		if (studentGroup.at(i).getName().compare(memberName) == 0) {
+			tempPtr = &studentGroup.at(i);
+			return tempPtr;
+		}
+	}
+	for (int i = 0; i < instructorGroup.size(); i++ ) {
+		if (instructorGroup.at(i).getName().compare(memberName) == 0 ) {
+			tempPtr = &instructorGroup.at(i);
+			return tempPtr;
+		}
+	}
+	std::cout << "Could not find user, try again" << std::endl;
+	return nullptr;
+}
+
+
+
+
