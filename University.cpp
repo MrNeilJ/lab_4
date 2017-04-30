@@ -3,7 +3,7 @@
  *
  * Date: 4.30.2017
  *
- * Description: This is the Univeristy class for this program.
+ * Description: This is the University class for this program.
  * This class host much of the functionality of the application.
  * It saves vectors for each of the types of groups we have and
  * allows us to save new users, access their information, search
@@ -19,7 +19,7 @@
 *                  University::University
 * Description: Constructor function that saves the initial
 * information and creates an object out of the name, pop,
- * number of students / instructors / buildings
+* number of students / instructors / buildings
 **************************************************************/
 University::University() {
 	uniName 		= "";
@@ -33,8 +33,8 @@ University::University() {
 *                  University::University
 * Description: Constructor function that saves the initial
 * information and creates an object out of the name, pop,
- * number of students / instructors / buildings.  Allows
- * the user to set the name of the school.
+* number of students / instructors / buildings.  Allows
+* the user to set the name of the school.
 **************************************************************/
 University::University(std::string userUni) {
 	uniName 		= userUni;
